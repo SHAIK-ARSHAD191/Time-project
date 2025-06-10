@@ -1,6 +1,7 @@
 # Time-project
 
 Project Overview
+
 This project is a simple digital clock web application built using HTML, CSS, and JavaScript. It displays hours, minutes, and seconds in separate styled boxes arranged horizontally.
 
 Files Included
