@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+.clock-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.clock {
+    color: #fff;
+    text-align: center;
+}
+
+.time-display {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.time-display span {
+    display: inline-block;
+    min-width: 80px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+    min-width: 20px !important;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.3;
+    }
+}
+
+#period {
+    font-size: 1.5rem;
+    vertical-align: top;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    min-width: auto !important;
+}
+
+.date-display {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.date-display span {
+    display: inline-block;
+    padding: 0 3px;
+}
+
+/* Hover effects */
+.time-display span:not(.blink):hover {
+    color: #74b9ff;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .time-display {
+        font-size: 3.5rem;
+    }
+    
+    .time-display span {
+        min-width: 60px;
+    }
+    
+    #period {
+        font-size: 1.2rem;
+    }
+    
+    .date-display {
+        font-size: 1.2rem;
+    }
+    
+    .clock-container {
+        padding: 30px;
+    }
+} 
